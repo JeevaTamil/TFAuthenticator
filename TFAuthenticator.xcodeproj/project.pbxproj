@@ -11,7 +11,29 @@
 		A8F6C4E026778C1D0083E55A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C4DF26778C1D0083E55A /* ContentView.swift */; };
 		A8F6C4E226778C1E0083E55A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8F6C4E126778C1E0083E55A /* Assets.xcassets */; };
 		A8F6C4E526778C1E0083E55A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8F6C4E426778C1E0083E55A /* Preview Assets.xcassets */; };
+		A8F6C51F26778E490083E55A /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C51E26778E490083E55A /* OTP.swift */; };
+		A8F6C52126778F9A0083E55A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C52026778F9A0083E55A /* DataManager.swift */; };
+		A8F6C524267791820083E55A /* SwiftOTP in Frameworks */ = {isa = PBXBuildFile; productRef = A8F6C523267791820083E55A /* SwiftOTP */; };
+		A8F6C53B2677AAA80083E55A /* TFAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C53A2677AAA80083E55A /* TFAError.swift */; };
+		A8F6C53E2677BC6D0083E55A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = A8F6C53D2677BC6D0083E55A /* KeychainAccess */; };
+		A8F6C5412677BDA30083E55A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C5402677BDA30083E55A /* Constants.swift */; };
+		A8F6C5432677C4120083E55A /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C5422677C4120083E55A /* OTPViewModel.swift */; };
+		A8F6C5452677CDDB0083E55A /* TFAListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C5442677CDDB0083E55A /* TFAListView.swift */; };
+		A8F6C5482677D3690083E55A /* TFAManualFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C5472677D3690083E55A /* TFAManualFormView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A8F6C50526778D3E0083E55A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A8F6C4DA26778C1D0083E55A /* TFAuthenticator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFAuthenticator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +41,18 @@
 		A8F6C4DF26778C1D0083E55A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A8F6C4E126778C1E0083E55A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8F6C4E426778C1E0083E55A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A8F6C4EB26778C8C0083E55A /* TFAuthenticator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TFAuthenticator.entitlements; sourceTree = "<group>"; };
+		A8F6C4F226778D3C0083E55A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A8F6C4F426778D3C0083E55A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A8F6C50C26778DAC0083E55A /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		A8F6C51E26778E490083E55A /* OTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTP.swift; sourceTree = "<group>"; };
+		A8F6C52026778F9A0083E55A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		A8F6C53A2677AAA80083E55A /* TFAError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFAError.swift; sourceTree = "<group>"; };
+		A8F6C5402677BDA30083E55A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A8F6C5422677C4120083E55A /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
+		A8F6C5442677CDDB0083E55A /* TFAListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFAListView.swift; sourceTree = "<group>"; };
+		A8F6C5462677D1230083E55A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A8F6C5472677D3690083E55A /* TFAManualFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFAManualFormView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F6C524267791820083E55A /* SwiftOTP in Frameworks */,
+				A8F6C53E2677BC6D0083E55A /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				A8F6C4DC26778C1D0083E55A /* TFAuthenticator */,
+				A8F6C4F126778D3C0083E55A /* Frameworks */,
 				A8F6C4DB26778C1D0083E55A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +88,13 @@
 		A8F6C4DC26778C1D0083E55A /* TFAuthenticator */ = {
 			isa = PBXGroup;
 			children = (
+				A8F6C5462677D1230083E55A /* Info.plist */,
+				A8F6C53F2677BD900083E55A /* Util */,
+				A8F6C51D26778E270083E55A /* DataManager */,
+				A8F6C51C26778E200083E55A /* ViewModel */,
+				A8F6C51B26778E1B0083E55A /* Model */,
+				A8F6C51A26778E160083E55A /* View */,
+				A8F6C4EB26778C8C0083E55A /* TFAuthenticator.entitlements */,
 				A8F6C4DD26778C1D0083E55A /* TFAuthenticatorApp.swift */,
 				A8F6C4DF26778C1D0083E55A /* ContentView.swift */,
 				A8F6C4E126778C1E0083E55A /* Assets.xcassets */,
@@ -67,6 +111,58 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A8F6C4F126778D3C0083E55A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8F6C4F226778D3C0083E55A /* WidgetKit.framework */,
+				A8F6C4F426778D3C0083E55A /* SwiftUI.framework */,
+				A8F6C50C26778DAC0083E55A /* Intents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8F6C51A26778E160083E55A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A8F6C5442677CDDB0083E55A /* TFAListView.swift */,
+				A8F6C5472677D3690083E55A /* TFAManualFormView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8F6C51B26778E1B0083E55A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8F6C51E26778E490083E55A /* OTP.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A8F6C51C26778E200083E55A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8F6C5422677C4120083E55A /* OTPViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A8F6C51D26778E270083E55A /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A8F6C52026778F9A0083E55A /* DataManager.swift */,
+				A8F6C53A2677AAA80083E55A /* TFAError.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		A8F6C53F2677BD900083E55A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A8F6C5402677BDA30083E55A /* Constants.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,12 +173,17 @@
 				A8F6C4D626778C1D0083E55A /* Sources */,
 				A8F6C4D726778C1D0083E55A /* Frameworks */,
 				A8F6C4D826778C1D0083E55A /* Resources */,
+				A8F6C50526778D3E0083E55A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TFAuthenticator;
+			packageProductDependencies = (
+				A8F6C523267791820083E55A /* SwiftOTP */,
+				A8F6C53D2677BC6D0083E55A /* KeychainAccess */,
+			);
 			productName = TFAuthenticator;
 			productReference = A8F6C4DA26778C1D0083E55A /* TFAuthenticator.app */;
 			productType = "com.apple.product-type.application";
@@ -99,6 +200,7 @@
 				TargetAttributes = {
 					A8F6C4D926778C1D0083E55A = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -111,6 +213,10 @@
 				Base,
 			);
 			mainGroup = A8F6C4D126778C1D0083E55A;
+			packageReferences = (
+				A8F6C522267791820083E55A /* XCRemoteSwiftPackageReference "SwiftOTP" */,
+				A8F6C53C2677BC6D0083E55A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = A8F6C4DB26778C1D0083E55A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +243,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F6C5452677CDDB0083E55A /* TFAListView.swift in Sources */,
 				A8F6C4E026778C1D0083E55A /* ContentView.swift in Sources */,
+				A8F6C52126778F9A0083E55A /* DataManager.swift in Sources */,
+				A8F6C53B2677AAA80083E55A /* TFAError.swift in Sources */,
 				A8F6C4DE26778C1D0083E55A /* TFAuthenticatorApp.swift in Sources */,
+				A8F6C5482677D3690083E55A /* TFAManualFormView.swift in Sources */,
+				A8F6C5432677C4120083E55A /* OTPViewModel.swift in Sources */,
+				A8F6C5412677BDA30083E55A /* Constants.swift in Sources */,
+				A8F6C51F26778E490083E55A /* OTP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,20 +377,28 @@
 		A8F6C4E926778C1E0083E55A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TFAuthenticator/TFAuthenticator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TFAuthenticator/Preview Content\"";
 				DEVELOPMENT_TEAM = F999UX5B85;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TFAuthenticator/Info.plist;
+				INFOPLIST_KEY_CFBundleExecutable = TFAuthenticator;
+				INFOPLIST_KEY_CFBundleName = TFAuthenticator;
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,6 +407,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeeva.TFAuthenticator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -294,20 +417,28 @@
 		A8F6C4EA26778C1E0083E55A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TFAuthenticator/TFAuthenticator.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TFAuthenticator/Preview Content\"";
-				DEVELOPMENT_TEAM = F999UX5B85;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TFAuthenticator/Info.plist;
+				INFOPLIST_KEY_CFBundleExecutable = TFAuthenticator;
+				INFOPLIST_KEY_CFBundleName = TFAuthenticator;
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +446,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeeva.TFAuthenticator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -343,6 +476,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8F6C522267791820083E55A /* XCRemoteSwiftPackageReference "SwiftOTP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lachlanbell/SwiftOTP.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		A8F6C53C2677BC6D0083E55A /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8F6C523267791820083E55A /* SwiftOTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8F6C522267791820083E55A /* XCRemoteSwiftPackageReference "SwiftOTP" */;
+			productName = SwiftOTP;
+		};
+		A8F6C53D2677BC6D0083E55A /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8F6C53C2677BC6D0083E55A /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A8F6C4D226778C1D0083E55A /* Project object */;
 }

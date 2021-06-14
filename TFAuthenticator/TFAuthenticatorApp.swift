@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TFAuthenticatorApp: App {
+    @StateObject var otpViewModel: OTPViewModel = OTPViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(otpViewModel)
         }
     }
 }
