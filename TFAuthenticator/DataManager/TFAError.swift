@@ -12,6 +12,7 @@ enum TFAError: Error {
     case invalidEncoding
     case unwrappingFailed
     case keychainError(error: String)
+    case unableToCreateOTPObj
     
     var description: String {
         switch self {
@@ -23,6 +24,8 @@ enum TFAError: Error {
             return "nil value when unwrapping"
         case .keychainError(let error):
             return error
+        case .unableToCreateOTPObj:
+            return "OTP Object is null when creating"
         }
     }
 }
