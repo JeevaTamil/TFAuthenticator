@@ -52,12 +52,5 @@ class DataManager {
             throw TFAError.invalidEncoding
         }
     }
-    
-    
- 
-    
-    
-    
-    
 }
 

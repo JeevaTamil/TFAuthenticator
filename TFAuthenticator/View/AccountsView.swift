@@ -10,6 +10,8 @@ import SwiftUI
 struct AccountsView: View {
     @EnvironmentObject var otpViewModel: OTPViewModel
     @Binding var timeRemaining: Int
+    @Binding var isToastPresented: Bool
+    
     var otps: [OTP]
     var time: Int {
         var components = DateComponents.init()
@@ -64,6 +66,14 @@ struct AccountsView: View {
                 } label: {
                     Label("Star", systemImage: !otp.isStared ? "star" : "star.fill")
                 }.tint(.yellow)
+            }
+            .onTapGesture {
+                let otp = otpViewModel.generateOTPs(otp: otp).replacingOccurrences(of: " ", with: "")
+                UIPasteboard.general.string = otp
+                debugPrint("copied otp ", otp)
+                withAnimation {
+                    isToastPresented.toggle()
+                }
             }
         }
     }

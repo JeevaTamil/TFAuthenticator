@@ -10,18 +10,17 @@ import SwiftUI
 enum ModelView: Identifiable, View {
     case scanQR
     case manual
-//    case update(OTP)
+    case update(OTP)
     case settings
     
     var id: String {
         switch self {
-            
         case .scanQR:
             return "scanQR"
         case .manual:
             return "manual"
-//        case .update(otp: let otp):
-//            return "update"
+        case .update(_):
+            return "update"
         case .settings:
             return "Settings"
         }
@@ -29,16 +28,16 @@ enum ModelView: Identifiable, View {
     
     var body: some View {
         NavigationView {
-        switch self {
-        case .scanQR:
-            TFAScanQView()
-        case .manual:
-            TFAManualFormView()
-//        case .update(let otp):
-        case .settings:
-            SettingsView()
-        }
-            
+            switch self {
+            case .scanQR:
+                TFAScanQView()
+            case .manual:
+                TFAManualFormView(formVM: OTPFormViewModel())
+            case .update(let otp):
+                TFAManualFormView(formVM: OTPFormViewModel(otp))
+            case .settings:
+                SettingsView()
+            }
         }
     }
 }

@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A82B073B267FDE8B00382016 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82B073A267FDE8B00382016 /* SettingsView.swift */; };
-		A8BE2BD3267B1C39009CAEDC /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BE2BD2267B1C39009CAEDC /* LoginForm.swift */; };
+		A851B8C4268F6939003E06E9 /* TFARecentlyDeletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A851B8C3268F6939003E06E9 /* TFARecentlyDeletedView.swift */; };
+		A851B8C6268F6BB9003E06E9 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A851B8C5268F6BB9003E06E9 /* ToastModifier.swift */; };
+		A851B8C8268F6F3A003E06E9 /* TFAListWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A851B8C7268F6F3A003E06E9 /* TFAListWrapperView.swift */; };
+		A8A81BE32684CC4300A2D156 /* OTPFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A81BE22684CC4300A2D156 /* OTPFormViewModel.swift */; };
 		A8D4B252267FAB6F00633B92 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D4B251267FAB6F00633B92 /* ViewModelProtocol.swift */; };
 		A8D4B255267FADA200633B92 /* MockOTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D4B254267FADA200633B92 /* MockOTPViewModel.swift */; };
 		A8D4B257267FB20900633B92 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D4B256267FB20900633B92 /* Extensions.swift */; };
@@ -47,7 +50,10 @@
 
 /* Begin PBXFileReference section */
 		A82B073A267FDE8B00382016 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		A8BE2BD2267B1C39009CAEDC /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		A851B8C3268F6939003E06E9 /* TFARecentlyDeletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFARecentlyDeletedView.swift; sourceTree = "<group>"; };
+		A851B8C5268F6BB9003E06E9 /* ToastModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
+		A851B8C7268F6F3A003E06E9 /* TFAListWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFAListWrapperView.swift; sourceTree = "<group>"; };
+		A8A81BE22684CC4300A2D156 /* OTPFormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPFormViewModel.swift; sourceTree = "<group>"; };
 		A8D4B251267FAB6F00633B92 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		A8D4B254267FADA200633B92 /* MockOTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOTPViewModel.swift; sourceTree = "<group>"; };
 		A8D4B256267FB20900633B92 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -156,11 +162,12 @@
 				A8D4B25E267FCCE800633B92 /* CodeScannerView.swift */,
 				A8F6C5442677CDDB0083E55A /* TFAListView.swift */,
 				A8F6C5472677D3690083E55A /* TFAManualFormView.swift */,
-				A8BE2BD2267B1C39009CAEDC /* LoginForm.swift */,
 				A8D4B25A267FCB5700633B92 /* AccountsView.swift */,
 				A8D4B25C267FCCA500633B92 /* TFAScanQView.swift */,
 				A8D4B260267FCEA700633B92 /* ModelView.swift */,
 				A82B073A267FDE8B00382016 /* SettingsView.swift */,
+				A851B8C3268F6939003E06E9 /* TFARecentlyDeletedView.swift */,
+				A851B8C7268F6F3A003E06E9 /* TFAListWrapperView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 		A8F6C51C26778E200083E55A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A8A81BE22684CC4300A2D156 /* OTPFormViewModel.swift */,
 				A8F6C5422677C4120083E55A /* OTPViewModel.swift */,
 				A8D4B254267FADA200633B92 /* MockOTPViewModel.swift */,
 			);
@@ -194,6 +202,7 @@
 		A8F6C53F2677BD900083E55A /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A851B8C5268F6BB9003E06E9 /* ToastModifier.swift */,
 				A8F6C5402677BDA30083E55A /* Constants.swift */,
 				A8D4B256267FB20900633B92 /* Extensions.swift */,
 				A8D4B258267FB6F200633B92 /* Message.swift */,
@@ -287,15 +296,18 @@
 				A8D4B252267FAB6F00633B92 /* ViewModelProtocol.swift in Sources */,
 				A8F6C53B2677AAA80083E55A /* TFAError.swift in Sources */,
 				A8D4B25B267FCB5700633B92 /* AccountsView.swift in Sources */,
+				A851B8C4268F6939003E06E9 /* TFARecentlyDeletedView.swift in Sources */,
+				A851B8C6268F6BB9003E06E9 /* ToastModifier.swift in Sources */,
 				A8F6C4DE26778C1D0083E55A /* TFAuthenticatorApp.swift in Sources */,
 				A8D4B259267FB6F200633B92 /* Message.swift in Sources */,
 				A8F6C5482677D3690083E55A /* TFAManualFormView.swift in Sources */,
 				A8D4B25D267FCCA500633B92 /* TFAScanQView.swift in Sources */,
 				A8F6C5432677C4120083E55A /* OTPViewModel.swift in Sources */,
 				A8D4B257267FB20900633B92 /* Extensions.swift in Sources */,
+				A8A81BE32684CC4300A2D156 /* OTPFormViewModel.swift in Sources */,
 				A8D4B261267FCEA700633B92 /* ModelView.swift in Sources */,
+				A851B8C8268F6F3A003E06E9 /* TFAListWrapperView.swift in Sources */,
 				A8F6C5412677BDA30083E55A /* Constants.swift in Sources */,
-				A8BE2BD3267B1C39009CAEDC /* LoginForm.swift in Sources */,
 				A8D4B25F267FCCE800633B92 /* CodeScannerView.swift in Sources */,
 				A8D4B255267FADA200633B92 /* MockOTPViewModel.swift in Sources */,
 				A8F6C51F26778E490083E55A /* OTP.swift in Sources */,

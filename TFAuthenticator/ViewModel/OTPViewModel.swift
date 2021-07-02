@@ -13,20 +13,24 @@ class OTPViewModel: ObservableObject {
     private let dataManager: DataManager = DataManager.shared
     
     var otps = CurrentValueSubject<[OTP], Never>([])
+    var recentlyDeleted = CurrentValueSubject<[OTP], Never>([])
     var staredOtps = CurrentValueSubject<[OTP], Never>([])
+    
     var error = CurrentValueSubject<TFAError?, Never>(nil)
     var addOTP = PassthroughSubject<OTP, Never>()
+    var updateOTP = PassthroughSubject<OTP, Never>()
     var deleteOTP = PassthroughSubject<OTP, Never>()
     var starOTP = PassthroughSubject<OTP, Never>()
-    
-    @Published var recentlyDeleted: [OTP] = []
+    var restoreOTP = PassthroughSubject<OTP, Never>()
+    var deleteRecentOTP = PassthroughSubject<OTP, Never>()
     
     var cancellable = Set<AnyCancellable>()
     
     init() {
+        loadOTP()
         subscriptions()
         subscribeOTP()
-        loadOTP()
+        
     }
     
     func subscriptions() {
@@ -38,12 +42,20 @@ class OTPViewModel: ObservableObject {
             }
             .store(in: &cancellable)
         
+        updateOTP
+            .sink { [unowned self] otp in
+                guard let index = otps.value.firstIndex(where: { $0.id == otp.id }) else { return }
+                self.objectWillChange.send()
+                otps.value[index] = otp
+            }
+            .store(in: &cancellable)
+        
         deleteOTP
             .receive(on: DispatchQueue.main)
             .sink { [unowned self] otp in
                 self.objectWillChange.send()
                 if let index = otps.value.firstIndex(where: { $0.id == otp.id}) {
-                    recentlyDeleted.append(otps.value[index])
+                    recentlyDeleted.value.append(otps.value[index])
                     otps.value.remove(at: index)
                 }
             }
@@ -55,6 +67,27 @@ class OTPViewModel: ObservableObject {
                 self.objectWillChange.send()
                 guard let index = otps.value.firstIndex(where: {$0.id == otp.id}) else { return }
                 otps.value[index].isStared.toggle()
+            }
+            .store(in: &cancellable)
+        
+        restoreOTP
+            .receive(on: DispatchQueue.main)
+            .sink { [self] otp in
+                self.objectWillChange.send()
+                guard let index = recentlyDeleted.value.firstIndex(where: {$0.id == otp.id}) else { return }
+                recentlyDeleted.value.remove(at: index)
+                otps.value.append(otp)
+                debugPrint("Deleted completely")
+            }
+            .store(in: &cancellable)
+        
+        deleteRecentOTP
+            .receive(on: DispatchQueue.main)
+            .sink { [unowned self] otp in
+                self.objectWillChange.send()
+                if let index = recentlyDeleted.value.firstIndex(where: { $0.id == otp.id}) {
+                    recentlyDeleted.value.remove(at: index)
+                }
             }
             .store(in: &cancellable)
         
@@ -80,15 +113,37 @@ class OTPViewModel: ObservableObject {
                 debugPrint("otps saved")
             }
             .store(in: &cancellable)
+        
+        recentlyDeleted
+            .receive(on: DispatchQueue.main)
+            .tryMap { [self] otps in
+                try dataManager.writeDataToKeyChain(for: Constants.keys.kRecentlyDeletedOTParray, value: otps)
+            }
+            .sink { complition in
+                switch complition {
+                case .failure(let error):
+                    self.objectWillChange.send()
+                    self.error.value = error as? TFAError
+                case .finished:
+                    debugPrint("finished")
+                }
+            } receiveValue: { _ in
+                debugPrint("otps saved in recently deleted")
+            }
+            .store(in: &cancellable)
+        
     }
     
     func loadOTP() {
         do {
             let otpArray = try dataManager.readDataFromKeyChain(from: Constants.keys.kOTParray, value: [OTP].self)
+            let recentlyDeletedotpArray = try dataManager.readDataFromKeyChain(from: Constants.keys.kRecentlyDeletedOTParray, value: [OTP].self)
             DispatchQueue.main.async {
                 self.objectWillChange.send()
                 self.otps.value = otpArray
+                self.recentlyDeleted.value = recentlyDeletedotpArray
                 debugPrint(otpArray)
+                debugPrint(recentlyDeletedotpArray)
             }
         } catch {
             self.objectWillChange.send()

@@ -12,46 +12,45 @@ struct TFAListView: View {
     @State private var shouldDisplayAddManualForm: Bool = false
     @State private var timeRemaining = Int()
     @State private var modelView: ModelView? = nil
-    
+    @State private var isSettingsPresent = false
+    @State private var isToastPresented = false
+    @State private var searchText: String = ""
     let timer = Timer.publish(every: 1, tolerance: 0.5, on: .main,  in: .common).autoconnect()
     
     var body: some View {
         List {
-            if otpViewModel.otps.value.filter({$0.isStared}).count != 0 {
-                Section(header: Text("Stared")) {
-                    AccountsView(timeRemaining: $timeRemaining, otps: otpViewModel.otps.value.filter({$0.isStared}))
-                }
-            }
-            if otpViewModel.otps.value.filter({!$0.isStared}).count != 0 {
-                Section(header: Text("Accounts")) {
-                    AccountsView(timeRemaining: $timeRemaining, otps: otpViewModel.otps.value.filter({!$0.isStared}))
-                }
-            }
+            TFAListWrapperView(timeRemaining: $timeRemaining, isToastPresented: $isToastPresented, otps: searchResults)
         }
+        .searchable(text: $searchText, placement: .sidebar)
+        .showToast("Copied", isPresented: $isToastPresented, color: .secondary, duration: 1, alignment: .bottom, toastType: .offsetToast)
         .navigationBarTitle("Authenticator")
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {
                 HStack {
-//                    settingsButton
-                Spacer()
-                Text("Add Accounts")
+                    settingsButton
+                    Spacer()
+                    Text("Add Accounts")
                         .foregroundStyle(.secondary)
                     Spacer()
                     addButton
                 }
-               // .background(.thinMaterial)
                 .ignoresSafeArea(edges: .horizontal)
             }
-//            ToolbarItemGroup(placement: .bottomBar) {
-//                ToolbarItem { addButton }
-//                ToolbarItem { settingsButton }
-//            }
         }
         .sheet(item: $modelView) { $0 }
+        .fullScreenCover(isPresented: $isSettingsPresent) { SettingsView() }
         .onReceive(timer, perform: { _ in
             scheduleTimer()
         })
         
+    }
+    
+    var searchResults: [OTP] {
+        if searchText.isEmpty {
+            return otpViewModel.otps.value
+        } else {
+            return otpViewModel.otps.value.filter{ $0.issuer.starts(with: searchText) }
+        }
     }
 }
 
@@ -60,11 +59,12 @@ extension TFAListView {
     
     var settingsButton: some View {
         Button {
-            modelView = .settings
+            //modelView = .settings
+            isSettingsPresent.toggle()
         } label: {
             Label("Settings", systemImage: "gear")
         }
-
+        
     }
     
     var addButton: some View {

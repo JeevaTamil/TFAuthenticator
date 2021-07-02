@@ -15,6 +15,9 @@ struct OTP: Identifiable, Codable {
     var digits : Int = 6
     var algorithm = "SHA1"
     var isStared: Bool = false
+    var isWidgetAllowed: Bool = true
+    var isWatchAllowed: Bool = true
+    var backupCodes: String = ""
 }
 
 extension OTP {
