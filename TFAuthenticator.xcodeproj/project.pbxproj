@@ -11,7 +11,25 @@
 		A851B8C4268F6939003E06E9 /* TFARecentlyDeletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A851B8C3268F6939003E06E9 /* TFARecentlyDeletedView.swift */; };
 		A851B8C6268F6BB9003E06E9 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A851B8C5268F6BB9003E06E9 /* ToastModifier.swift */; };
 		A851B8C8268F6F3A003E06E9 /* TFAListWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A851B8C7268F6F3A003E06E9 /* TFAListWrapperView.swift */; };
+		A86CC6A826EB631D00C62F1A /* PhoneSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CC6A726EB631D00C62F1A /* PhoneSessionViewModel.swift */; };
+		A86CC6AA26EB63AC00C62F1A /* WatchSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CC6A926EB63AC00C62F1A /* WatchSessionViewModel.swift */; };
+		A86CC6AE26EBA83200C62F1A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D4B256267FB20900633B92 /* Extensions.swift */; };
 		A8A81BE32684CC4300A2D156 /* OTPFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A81BE22684CC4300A2D156 /* OTPFormViewModel.swift */; };
+		A8C75FC026E8888E0070CA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C75FBF26E8888E0070CA45 /* Assets.xcassets */; };
+		A8C75FC626E8888F0070CA45 /* WatchTFAuthenticator Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A8C75FC526E8888F0070CA45 /* WatchTFAuthenticator Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A8C75FCD26E8888F0070CA45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C75FCC26E8888F0070CA45 /* ContentView.swift */; };
+		A8C75FCF26E8888F0070CA45 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C75FCE26E8888F0070CA45 /* NotificationController.swift */; };
+		A8C75FD126E8888F0070CA45 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C75FD026E8888F0070CA45 /* NotificationView.swift */; };
+		A8C75FD326E8888F0070CA45 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C75FD226E8888F0070CA45 /* ComplicationController.swift */; };
+		A8C75FD526E888900070CA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C75FD426E888900070CA45 /* Assets.xcassets */; };
+		A8C75FD826E888900070CA45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C75FD726E888900070CA45 /* Preview Assets.xcassets */; };
+		A8C75FDD26E888900070CA45 /* WatchTFAuthenticator.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A8C75FBD26E8888C0070CA45 /* WatchTFAuthenticator.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A8C75FE626E88E370070CA45 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C5402677BDA30083E55A /* Constants.swift */; };
+		A8C75FE726E88E3D0070CA45 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C51E26778E490083E55A /* OTP.swift */; };
+		A8C75FE926E88E760070CA45 /* TFAuthenticatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C4DD26778C1D0083E55A /* TFAuthenticatorApp.swift */; };
+		A8C75FEB26E88EE10070CA45 /* SwiftOTP in Frameworks */ = {isa = PBXBuildFile; productRef = A8C75FEA26E88EE10070CA45 /* SwiftOTP */; };
+		A8C75FED26E88EE10070CA45 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = A8C75FEC26E88EE10070CA45 /* KeychainAccess */; };
+		A8C75FEE26E8957D0070CA45 /* TFAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C53A2677AAA80083E55A /* TFAError.swift */; };
 		A8D4B252267FAB6F00633B92 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D4B251267FAB6F00633B92 /* ViewModelProtocol.swift */; };
 		A8D4B255267FADA200633B92 /* MockOTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D4B254267FADA200633B92 /* MockOTPViewModel.swift */; };
 		A8D4B257267FB20900633B92 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D4B256267FB20900633B92 /* Extensions.swift */; };
@@ -20,6 +38,7 @@
 		A8D4B25D267FCCA500633B92 /* TFAScanQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D4B25C267FCCA500633B92 /* TFAScanQView.swift */; };
 		A8D4B25F267FCCE800633B92 /* CodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D4B25E267FCCE800633B92 /* CodeScannerView.swift */; };
 		A8D4B261267FCEA700633B92 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D4B260267FCEA700633B92 /* ModelView.swift */; };
+		A8D6000B26E8A67300526D72 /* WatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6000A26E8A67300526D72 /* WatchViewModel.swift */; };
 		A8F6C4DE26778C1D0083E55A /* TFAuthenticatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C4DD26778C1D0083E55A /* TFAuthenticatorApp.swift */; };
 		A8F6C4E026778C1D0083E55A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C4DF26778C1D0083E55A /* ContentView.swift */; };
 		A8F6C4E226778C1E0083E55A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8F6C4E126778C1E0083E55A /* Assets.xcassets */; };
@@ -35,7 +54,46 @@
 		A8F6C5482677D3690083E55A /* TFAManualFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F6C5472677D3690083E55A /* TFAManualFormView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A8C75FC726E8888F0070CA45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8F6C4D226778C1D0083E55A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8C75FC426E8888F0070CA45;
+			remoteInfo = "WatchTFAuthenticator Extension";
+		};
+		A8C75FDB26E888900070CA45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8F6C4D226778C1D0083E55A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8C75FBC26E8888C0070CA45;
+			remoteInfo = WatchTFAuthenticator;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		A8C75FDE26E888900070CA45 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				A8C75FDD26E888900070CA45 /* WatchTFAuthenticator.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8C75FE126E888900070CA45 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A8C75FC626E8888F0070CA45 /* WatchTFAuthenticator Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A8F6C50526778D3E0083E55A /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,7 +111,20 @@
 		A851B8C3268F6939003E06E9 /* TFARecentlyDeletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFARecentlyDeletedView.swift; sourceTree = "<group>"; };
 		A851B8C5268F6BB9003E06E9 /* ToastModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
 		A851B8C7268F6F3A003E06E9 /* TFAListWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFAListWrapperView.swift; sourceTree = "<group>"; };
+		A86CC6A726EB631D00C62F1A /* PhoneSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSessionViewModel.swift; sourceTree = "<group>"; };
+		A86CC6A926EB63AC00C62F1A /* WatchSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionViewModel.swift; sourceTree = "<group>"; };
 		A8A81BE22684CC4300A2D156 /* OTPFormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPFormViewModel.swift; sourceTree = "<group>"; };
+		A8C75FBD26E8888C0070CA45 /* WatchTFAuthenticator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchTFAuthenticator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8C75FBF26E8888E0070CA45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8C75FC526E8888F0070CA45 /* WatchTFAuthenticator Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchTFAuthenticator Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8C75FCC26E8888F0070CA45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A8C75FCE26E8888F0070CA45 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		A8C75FD026E8888F0070CA45 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		A8C75FD226E8888F0070CA45 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		A8C75FD426E888900070CA45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8C75FD726E888900070CA45 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A8C75FD926E888900070CA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8C75FDA26E888900070CA45 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		A8D4B251267FAB6F00633B92 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		A8D4B254267FADA200633B92 /* MockOTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOTPViewModel.swift; sourceTree = "<group>"; };
 		A8D4B256267FB20900633B92 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -62,6 +133,8 @@
 		A8D4B25C267FCCA500633B92 /* TFAScanQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFAScanQView.swift; sourceTree = "<group>"; };
 		A8D4B25E267FCCE800633B92 /* CodeScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScannerView.swift; sourceTree = "<group>"; };
 		A8D4B260267FCEA700633B92 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
+		A8D6000A26E8A67300526D72 /* WatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewModel.swift; sourceTree = "<group>"; };
+		A8D6000C26E8A6E200526D72 /* WatchTFAuthenticator Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchTFAuthenticator Extension.entitlements"; sourceTree = "<group>"; };
 		A8F6C4DA26778C1D0083E55A /* TFAuthenticator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFAuthenticator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F6C4DD26778C1D0083E55A /* TFAuthenticatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFAuthenticatorApp.swift; sourceTree = "<group>"; };
 		A8F6C4DF26778C1D0083E55A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +155,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A8C75FC226E8888F0070CA45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C75FED26E88EE10070CA45 /* KeychainAccess in Frameworks */,
+				A8C75FEB26E88EE10070CA45 /* SwiftOTP in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A8F6C4D726778C1D0083E55A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,6 +176,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8C75FBE26E8888C0070CA45 /* WatchTFAuthenticator */ = {
+			isa = PBXGroup;
+			children = (
+				A8C75FBF26E8888E0070CA45 /* Assets.xcassets */,
+			);
+			path = WatchTFAuthenticator;
+			sourceTree = "<group>";
+		};
+		A8C75FC926E8888F0070CA45 /* WatchTFAuthenticator Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A8D6000C26E8A6E200526D72 /* WatchTFAuthenticator Extension.entitlements */,
+				A8C75FCC26E8888F0070CA45 /* ContentView.swift */,
+				A8C75FCE26E8888F0070CA45 /* NotificationController.swift */,
+				A8C75FD026E8888F0070CA45 /* NotificationView.swift */,
+				A8C75FD226E8888F0070CA45 /* ComplicationController.swift */,
+				A8C75FD426E888900070CA45 /* Assets.xcassets */,
+				A8C75FD926E888900070CA45 /* Info.plist */,
+				A8C75FDA26E888900070CA45 /* PushNotificationPayload.apns */,
+				A8C75FD626E888900070CA45 /* Preview Content */,
+				A8D6000A26E8A67300526D72 /* WatchViewModel.swift */,
+				A86CC6A926EB63AC00C62F1A /* WatchSessionViewModel.swift */,
+			);
+			path = "WatchTFAuthenticator Extension";
+			sourceTree = "<group>";
+		};
+		A8C75FD626E888900070CA45 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A8C75FD726E888900070CA45 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		A8D4B253267FAD6E00633B92 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				A8F6C4DC26778C1D0083E55A /* TFAuthenticator */,
+				A8C75FBE26E8888C0070CA45 /* WatchTFAuthenticator */,
+				A8C75FC926E8888F0070CA45 /* WatchTFAuthenticator Extension */,
 				A8F6C4F126778D3C0083E55A /* Frameworks */,
 				A8F6C4DB26778C1D0083E55A /* Products */,
 			);
@@ -115,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				A8F6C4DA26778C1D0083E55A /* TFAuthenticator.app */,
+				A8C75FBD26E8888C0070CA45 /* WatchTFAuthenticator.app */,
+				A8C75FC526E8888F0070CA45 /* WatchTFAuthenticator Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +306,7 @@
 				A8A81BE22684CC4300A2D156 /* OTPFormViewModel.swift */,
 				A8F6C5422677C4120083E55A /* OTPViewModel.swift */,
 				A8D4B254267FADA200633B92 /* MockOTPViewModel.swift */,
+				A86CC6A726EB631D00C62F1A /* PhoneSessionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -213,6 +334,44 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A8C75FBC26E8888C0070CA45 /* WatchTFAuthenticator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8C75FE526E888900070CA45 /* Build configuration list for PBXNativeTarget "WatchTFAuthenticator" */;
+			buildPhases = (
+				A8C75FBB26E8888C0070CA45 /* Resources */,
+				A8C75FE126E888900070CA45 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8C75FC826E8888F0070CA45 /* PBXTargetDependency */,
+			);
+			name = WatchTFAuthenticator;
+			productName = WatchTFAuthenticator;
+			productReference = A8C75FBD26E8888C0070CA45 /* WatchTFAuthenticator.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		A8C75FC426E8888F0070CA45 /* WatchTFAuthenticator Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8C75FE426E888900070CA45 /* Build configuration list for PBXNativeTarget "WatchTFAuthenticator Extension" */;
+			buildPhases = (
+				A8C75FC126E8888F0070CA45 /* Sources */,
+				A8C75FC226E8888F0070CA45 /* Frameworks */,
+				A8C75FC326E8888F0070CA45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchTFAuthenticator Extension";
+			packageProductDependencies = (
+				A8C75FEA26E88EE10070CA45 /* SwiftOTP */,
+				A8C75FEC26E88EE10070CA45 /* KeychainAccess */,
+			);
+			productName = "WatchTFAuthenticator Extension";
+			productReference = A8C75FC526E8888F0070CA45 /* WatchTFAuthenticator Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		A8F6C4D926778C1D0083E55A /* TFAuthenticator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8F6C4E826778C1E0083E55A /* Build configuration list for PBXNativeTarget "TFAuthenticator" */;
@@ -221,10 +380,12 @@
 				A8F6C4D726778C1D0083E55A /* Frameworks */,
 				A8F6C4D826778C1D0083E55A /* Resources */,
 				A8F6C50526778D3E0083E55A /* Embed App Extensions */,
+				A8C75FDE26E888900070CA45 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A8C75FDC26E888900070CA45 /* PBXTargetDependency */,
 			);
 			name = TFAuthenticator;
 			packageProductDependencies = (
@@ -245,6 +406,12 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					A8C75FBC26E8888C0070CA45 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					A8C75FC426E8888F0070CA45 = {
+						CreatedOnToolsVersion = 13.0;
+					};
 					A8F6C4D926778C1D0083E55A = {
 						CreatedOnToolsVersion = 13.0;
 						LastSwiftMigration = 1300;
@@ -269,11 +436,30 @@
 			projectRoot = "";
 			targets = (
 				A8F6C4D926778C1D0083E55A /* TFAuthenticator */,
+				A8C75FBC26E8888C0070CA45 /* WatchTFAuthenticator */,
+				A8C75FC426E8888F0070CA45 /* WatchTFAuthenticator Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A8C75FBB26E8888C0070CA45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C75FC026E8888E0070CA45 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8C75FC326E8888F0070CA45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C75FD826E888900070CA45 /* Preview Assets.xcassets in Resources */,
+				A8C75FD526E888900070CA45 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A8F6C4D826778C1D0083E55A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,6 +472,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A8C75FC126E8888F0070CA45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C75FE626E88E370070CA45 /* Constants.swift in Sources */,
+				A8C75FEE26E8957D0070CA45 /* TFAError.swift in Sources */,
+				A8D6000B26E8A67300526D72 /* WatchViewModel.swift in Sources */,
+				A8C75FE926E88E760070CA45 /* TFAuthenticatorApp.swift in Sources */,
+				A8C75FCF26E8888F0070CA45 /* NotificationController.swift in Sources */,
+				A8C75FCD26E8888F0070CA45 /* ContentView.swift in Sources */,
+				A8C75FE726E88E3D0070CA45 /* OTP.swift in Sources */,
+				A8C75FD326E8888F0070CA45 /* ComplicationController.swift in Sources */,
+				A8C75FD126E8888F0070CA45 /* NotificationView.swift in Sources */,
+				A86CC6AE26EBA83200C62F1A /* Extensions.swift in Sources */,
+				A86CC6AA26EB63AC00C62F1A /* WatchSessionViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A8F6C4D626778C1D0083E55A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -302,6 +506,7 @@
 				A8D4B259267FB6F200633B92 /* Message.swift in Sources */,
 				A8F6C5482677D3690083E55A /* TFAManualFormView.swift in Sources */,
 				A8D4B25D267FCCA500633B92 /* TFAScanQView.swift in Sources */,
+				A86CC6A826EB631D00C62F1A /* PhoneSessionViewModel.swift in Sources */,
 				A8F6C5432677C4120083E55A /* OTPViewModel.swift in Sources */,
 				A8D4B257267FB20900633B92 /* Extensions.swift in Sources */,
 				A8A81BE32684CC4300A2D156 /* OTPFormViewModel.swift in Sources */,
@@ -317,7 +522,142 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A8C75FC826E8888F0070CA45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8C75FC426E8888F0070CA45 /* WatchTFAuthenticator Extension */;
+			targetProxy = A8C75FC726E8888F0070CA45 /* PBXContainerItemProxy */;
+		};
+		A8C75FDC26E888900070CA45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8C75FBC26E8888C0070CA45 /* WatchTFAuthenticator */;
+			targetProxy = A8C75FDB26E888900070CA45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A8C75FDF26E888900070CA45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F999UX5B85;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = WatchTFAuthenticator_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchTFAuthenticator;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.jeeva.TFAuthenticator;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeeva.TFAuthenticator.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		A8C75FE026E888900070CA45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = WatchTFAuthenticator_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchTFAuthenticator;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.jeeva.TFAuthenticator;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeeva.TFAuthenticator.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		A8C75FE226E888900070CA45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "WatchTFAuthenticator Extension/WatchTFAuthenticator Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchTFAuthenticator Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = F999UX5B85;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WatchTFAuthenticator Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "WatchTFAuthenticator Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = WatchTFAuthenticator_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeeva.TFAuthenticator.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		A8C75FE326E888900070CA45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "WatchTFAuthenticator Extension/WatchTFAuthenticator Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchTFAuthenticator Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = F999UX5B85;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WatchTFAuthenticator Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "WatchTFAuthenticator Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = WatchTFAuthenticator_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeeva.TFAuthenticator.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
 		A8F6C4E626778C1E0083E55A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -517,6 +857,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A8C75FE426E888900070CA45 /* Build configuration list for PBXNativeTarget "WatchTFAuthenticator Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8C75FE226E888900070CA45 /* Debug */,
+				A8C75FE326E888900070CA45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8C75FE526E888900070CA45 /* Build configuration list for PBXNativeTarget "WatchTFAuthenticator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8C75FDF26E888900070CA45 /* Debug */,
+				A8C75FE026E888900070CA45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A8F6C4D526778C1D0083E55A /* Build configuration list for PBXProject "TFAuthenticator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -557,6 +915,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A8C75FEA26E88EE10070CA45 /* SwiftOTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8F6C522267791820083E55A /* XCRemoteSwiftPackageReference "SwiftOTP" */;
+			productName = SwiftOTP;
+		};
+		A8C75FEC26E88EE10070CA45 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8F6C53C2677BC6D0083E55A /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		A8F6C523267791820083E55A /* SwiftOTP */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A8F6C522267791820083E55A /* XCRemoteSwiftPackageReference "SwiftOTP" */;

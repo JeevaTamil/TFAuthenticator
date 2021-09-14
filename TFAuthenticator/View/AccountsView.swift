@@ -13,6 +13,7 @@ struct AccountsView: View {
     @Binding var isToastPresented: Bool
     
     var otps: [OTP]
+    
     var time: Int {
         var components = DateComponents.init()
         components = Calendar.current.dateComponents([.hour, .minute, .second], from: Date())
@@ -76,5 +77,8 @@ struct AccountsView: View {
                 }
             }
         }
+//        .onMove { indexSet, index in
+//            otpViewModel.editOrderofOTP(indexSet: indexSet, index: index)
+//        }
     }
 }

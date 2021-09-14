@@ -18,6 +18,7 @@ struct TFAListView: View {
     let timer = Timer.publish(every: 1, tolerance: 0.5, on: .main,  in: .common).autoconnect()
     
     var body: some View {
+        
         List {
             TFAListWrapperView(timeRemaining: $timeRemaining, isToastPresented: $isToastPresented, otps: searchResults)
         }
@@ -25,6 +26,7 @@ struct TFAListView: View {
         .showToast("Copied", isPresented: $isToastPresented, color: .secondary, duration: 1, alignment: .bottom, toastType: .offsetToast)
         .navigationBarTitle("Authenticator")
         .toolbar {
+            //            ToolbarItem(placement: .navigationBarTrailing) { EditButton() }
             ToolbarItemGroup(placement: .bottomBar) {
                 HStack {
                     settingsButton
@@ -42,8 +44,9 @@ struct TFAListView: View {
         .onReceive(timer, perform: { _ in
             scheduleTimer()
         })
-        
     }
+    
+    
     
     var searchResults: [OTP] {
         if searchText.isEmpty {
@@ -59,12 +62,10 @@ extension TFAListView {
     
     var settingsButton: some View {
         Button {
-            //modelView = .settings
             isSettingsPresent.toggle()
         } label: {
             Label("Settings", systemImage: "gear")
         }
-        
     }
     
     var addButton: some View {

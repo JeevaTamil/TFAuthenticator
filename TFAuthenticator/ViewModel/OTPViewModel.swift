@@ -10,6 +10,7 @@ import Combine
 import SwiftOTP
 
 class OTPViewModel: ObservableObject {
+    var phoneSessionViewModel: PhoneSessionViewModel!
     private let dataManager: DataManager = DataManager.shared
     
     var otps = CurrentValueSubject<[OTP], Never>([])
@@ -27,10 +28,10 @@ class OTPViewModel: ObservableObject {
     var cancellable = Set<AnyCancellable>()
     
     init() {
+        phoneSessionViewModel = PhoneSessionViewModel()
         loadOTP()
         subscriptions()
         subscribeOTP()
-        
     }
     
     func subscriptions() {
@@ -100,6 +101,7 @@ class OTPViewModel: ObservableObject {
             .dropFirst()
             .tryMap { [self] otps in
                 try dataManager.writeDataToKeyChain(for: Constants.keys.kOTParray, value: otps)
+                self.sendOTPArrayToWatch()
             }
             .sink { complition in
                 switch complition {
@@ -142,6 +144,7 @@ class OTPViewModel: ObservableObject {
                 self.objectWillChange.send()
                 self.otps.value = otpArray
                 self.recentlyDeleted.value = recentlyDeletedotpArray
+                self.sendOTPArrayToWatch()
                 debugPrint(otpArray)
                 debugPrint(recentlyDeletedotpArray)
             }
@@ -151,6 +154,10 @@ class OTPViewModel: ObservableObject {
         }
     }
     
+    func editOrderofOTP(indexSet: IndexSet, index: Int) {
+        self.objectWillChange.send()
+        otps.value.move(fromOffsets: indexSet, toOffset: index)
+    }
     
     func generateOTPs(otp: OTP) -> String {
         guard let data = base32DecodeToData(otp.id) else {
@@ -174,5 +181,21 @@ class OTPViewModel: ObservableObject {
         }
         return codeVal
     }
+    
+    func sendOTPArrayToWatch() {
+       // let message: [String: [OTP]] = ["otpArr": otps.value]
+        debugPrint("OTPs shared to watch")
+        //        phoneSessionViewModel.session.sendMessage(message, replyHandler: nil) { error in
+        //            self.error.value = TFAError.unableToCreateOTPObj
+        //        }
         
+        do {
+            let encodedData = try JSONEncoder().encode(self.otps.value)
+            phoneSessionViewModel.session.sendMessageData(encodedData, replyHandler: nil) { error in
+                print(error.localizedDescription)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }
